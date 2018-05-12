@@ -3,8 +3,7 @@
 
 ###### Endpoint URL:http://api.test
 
-###### Title
-	Register a new user.
+#### Title: Register a new user.
 
 ###### URL
 	/api/v1/auth/register
@@ -53,8 +52,7 @@
 	}
 
 
-###### Title
-	Login.
+#### Title: Login.
 
 ###### URL
 	/api/v1/auth/login
@@ -97,8 +95,7 @@
 	}
 
 
-###### Title
-	Get Auth User.
+#### Title: Get Auth User.
 
 ###### URL
 	api/v1/user?token=<token>
@@ -137,8 +134,7 @@
 	http://api.test/api/v1/user?token=eyJ0eXAiOiJKV1QiLCJhbG
 
 
-###### Title
-	Update user.
+#### Title: Update user.
 	NOTE:This endpoint only update non empty attributes
 
 ###### URL
@@ -206,8 +202,7 @@
 	}
 
 
-###### Title
-	Delete a User.
+#### Title: Delete a User.
 
 ###### URL
 	api/v1/users/<uuid>?token=<token>
