@@ -20,7 +20,12 @@ class UserController extends RegisterController
         $this->user = $user;
     }
 
-
+    /**
+     * Register a new user.
+     *
+     * @param  Obj $request with email, forename, surname and password.
+     * @return json string.
+     */
 
     public function register(Request $request){
 
@@ -48,6 +53,13 @@ class UserController extends RegisterController
         return response()->json(['status'=>true,'message'=>'User created successfully','data'=>$user], 201);
     }
 
+     /**
+     * Login a user.
+     *
+     * @param  Obj $request with email and password.
+     * @return json string with user token.
+     */
+
     public function login(Request $request){
         $credentials = $request->only('email', 'password');
         $token = null;
@@ -61,6 +73,13 @@ class UserController extends RegisterController
         return response()->json(compact('token'));
     }
 
+    /**
+     * Get user's data.
+     *
+     * @param  Obj $request with user's token.
+     * @return json with user data or and error.
+     */
+
     public function getAuthUser(Request $request){
         $user = JWTAuth::toUser($request->token);
         if($user) {
@@ -69,6 +88,13 @@ class UserController extends RegisterController
 
         return response()->json(['error'=> 'User doesn not exist"'], 404);
     }
+
+    /**
+     * Delete a user.
+     *
+     * @param  Obj $user.
+     * @return json success message or an error.
+     */
 
     public function delete(User $user){
 
@@ -87,6 +113,14 @@ class UserController extends RegisterController
 
          return response()->json(['error'=> 'The user was not deleted"'], 200);
     }
+
+    /**
+     * Update a user.
+     *
+     * @param  Obj $user.
+     * @param  Obj $request with user's data.
+     * @return json success message or an error.
+     */
 
     public function update(User $user, Request $request){
 
