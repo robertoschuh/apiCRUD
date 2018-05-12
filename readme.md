@@ -1,16 +1,17 @@
 
-API documentation
-Endpoint URL:http://api.test
+## API Documentation
 
-Title
+###### Endpoint URL:http://api.test
+
+###### Title
 	Register a new user.
 
-URL
+###### URL
 	/api/v1/auth/register
 
-Method: POST
+###### Method: POST
 
-Data Params
+###### Data Params
 	
 	Example
 	{
@@ -21,15 +22,14 @@ Data Params
 		
 	}
 
+#### Success Response:
+	 Example:
+	 Code: 201
+	 Content: 
+	 {"status":true,"message":"User created successfully","data":{"id":"7cd32bf8-5560-11e8-9d53-080027f0d6cc","forename":"chuiquito","surname":"delacalzada","email":"chiquito@otro.com","updated_at":"2018-05-11 21:15:53","created_at":"2018-05-11 21:15:53"}}
 
 
-
-Success Response:
-	Example:
-	Code: 201
-	Content: {"status":true,"message":"User created successfully","data":{"id":"7cd32bf8-5560-11e8-9d53-080027f0d6cc","forename":"chuiquito","surname":"delacalzada","email":"chiquito@otro.com","updated_at":"2018-05-11 21:15:53","created_at":"2018-05-11 21:15:53"}}
-
-Error Response:
+###### Error Response:
  	Example:
  	Code:401
  	Content:{"error":"User already exists"}
@@ -41,7 +41,8 @@ Error Response:
 
  	NOTE:(we could add more validation errors for the other attributes)
 
-  Sample Call 	
+ ###### Sample Call 	
+ 
   Example
 	{
 		forename:chuiquito,
@@ -52,18 +53,16 @@ Error Response:
 	}
 
 
-
-
-Title
+###### Title
 	Login.
 
-URL
+###### URL
 	/api/v1/auth/login
 
-Method: POST
+###### Method: POST
 
-Data Params
-	
+###### Data Params
+######	
 	Example
 	{
 		email:chuiquito [string],
@@ -72,26 +71,25 @@ Data Params
 	}
 
 
+######
 
-
-Success Response:
+###### Success Response:
 	Example:
 	Code: 200
 	Content: {"token":"sdsadasderererzxz.ZMGQ2Y2MiLCJpc3MiOiJodHRwOi8vYXBpLnRlc"}
 
-Error Response:
+###### Error Response:
  	Example:
  	Code:422
  	Content:["invalid_email_or_password"]
 
- 	
-
-  Sample Call 	
-  Example:
+ 
+ ###### Sample Call 	
+ ###### Example:
   	POST /api/v1/auth/login
 	content-type: application/x-www-form-urlencoded
 
-  BODY:
+ ###### BODY:
 	{
 		email:chuiquito,
 		password:delacalzada
@@ -99,21 +97,20 @@ Error Response:
 	}
 
 
-Title
+###### Title
 	Get Auth User.
 
-URL
+###### URL
 	api/v1/user?token=<token>
 
-Method: GET
+###### Method: GET
 
-URL Params 
+###### URL Params 
 	token=<string>
 	example:token=asdsaddfsdasdasdsdfsdfsfsaddasd
 		
 
-
-Success Response:
+###### Success Response:
 	Example:
 	Code: 200
 	Content: 
@@ -128,35 +125,35 @@ Success Response:
 	    }
 	}
 
-Error Response:
+###### Error Response:
  	Example:
  	Code:403
  	Content:["token_invalid"]
 
  	
 
-  Sample Call 	
+ ###### Sample Call 	
   	Example
 	http://api.test/api/v1/user?token=eyJ0eXAiOiJKV1QiLCJhbG
 
 
-Title
+###### Title
 	Update user.
 	NOTE:This endpoint only update non empty attributes
 
-URL
+###### URL
 	api/v1/users/<uuid>?token=<token>
 
-Method: PUT
+###### Method: PUT
 
-URL Params 
+###### URL Params 
 
 	uuid==<string>
 	token=<string>
 	example:bdbe6f82-551b-11e8-b91a-080027f0d6cc?token=asdsaddfsdasdasdsdfsdfsfsaddasd
 		
 
-Data Params
+###### Data Params
 	
 	Example
 	{
@@ -180,12 +177,12 @@ Data Params
 		
 	}
 
-Success Response:
+###### Success Response:
 	Example:
 	Code: 200
 	Content: {"message": "User updated"}
 
-Error Response:
+###### Error Response:
  	Example:
  	Code:404
  	Content:{
@@ -196,7 +193,7 @@ Error Response:
 	}
 
 
-  Sample Call 	
+###### Sample Call 	
   Example:
 	PUT /api/v1/users/bdbe6f82-551b-11e8-b91a-080027f0sd6cc
 	content-type: application/x-www-form-urlencoded
@@ -209,22 +206,22 @@ Error Response:
 	}
 
 
-Title
+###### Title
 	Delete a User.
 
-URL
+###### URL
 	api/v1/users/<uuid>?token=<token>
 
-Method: DELETE
+###### Method: DELETE
 
-URL Params 
+###### URL Params 
 	uuid=<string>
 	token=<string>
 	example:token=asdasdasdad?asdsaddfsdasdasdsdfsdfsfsaddasd
 		
 
 
-Success Response:
+###### Success Response:
 	Example:
 	Code: 200
 	Content: 
@@ -232,7 +229,7 @@ Success Response:
     	"message": "User deleted"
 	}
 
-Error Response:
+###### Error Response:
  	Example:
  	Code:404
  	Content:{
@@ -243,6 +240,6 @@ Error Response:
 	}
 
  	
-Sample Call 	
+###### Sample Call 	
 	Example:
 	http://api.test/api/v1/users/4f8ab3d8-55c8-11e8-aacc-080027f0d6cc?token=eyJ0eXAiOiJKV1QiLCJhbGciOi
