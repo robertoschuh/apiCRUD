@@ -14,10 +14,10 @@
 	
 	Example
 	{
-		forename:chuiquito [string],
-		surname:delacalzada  [string],
-		email:chiquito@otro.com  [string],
-		password:melon2000  [string]
+		forename:chuiquito [string, required],
+		surname:delacalzada  [string, required],
+		email:chiquito@otro.com  [string, required],
+		password:melon2000  [string, required]
 		
 	}
 
@@ -42,13 +42,12 @@
 
  ###### Sample Call 	
  
-  Example
+ Example:
 	{
 		forename:chuiquito,
 		surname:delacalzada,
 		email:chiquito@otro.com,
 		password:melon2000
-		
 	}
 
 
@@ -63,8 +62,8 @@
 ######	
 	Example
 	{
-		email:chuiquito [string],
-		password:delacalzada  [string]
+		email:chuiquito [string, required],
+		password:delacalzada  [string, required]
 	
 	}
 
@@ -103,7 +102,7 @@
 ###### Method: GET
 
 ###### URL Params 
-	token=<string>
+	token=<string> [required]
 	example:token=asdsaddfsdasdasdsdfsdfsfsaddasd
 		
 
@@ -144,8 +143,8 @@
 
 ###### URL Params 
 
-	uuid==<string>
-	token=<string>
+	uuid==<string>[required]
+	token=<string>[required]
 	example:bdbe6f82-551b-11e8-b91a-080027f0d6cc?token=asdsaddfsdasdasdsdfsdfsfsaddasd
 		
 
@@ -153,15 +152,15 @@
 	
 	Example
 	{
-		forename:Julia [string],
-
+		forename:Julia [string, optional],
+		surname:Julia [string, optional]
 	}
 
 	Example2
 	{
 		
-		email:chiquito@otro.com  [string],
-		password:newPassword  [string]
+		email:chiquito@otro.com  [string, optional],
+		password:newPassword  [string, optional]
 		
 	}
 	Example3
@@ -210,8 +209,8 @@
 ###### Method: DELETE
 
 ###### URL Params 
-	uuid=<string>
-	token=<string>
+	uuid=<string>[required]
+	token=<string>[required]
 	example:token=asdasdasdad?asdsaddfsdasdasdsdfsdfsfsaddasd
 		
 
