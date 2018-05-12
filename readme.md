@@ -1,6 +1,6 @@
 
 API documentation
-http://api.test
+Endpoint URL:http://api.test
 
 Title
 	Register a new user.
@@ -11,15 +11,17 @@ URL
 Method: POST
 
 Data Params
-
+	
 	Example
 	{
-		forename:chuiquito,
-		surname:delacalzada,
-		email:chiquito@otro.com,
-		password:melon2000
+		forename:chuiquito [string],
+		surname:delacalzada  [string],
+		email:chiquito@otro.com  [string],
+		password:melon2000  [string]
 		
 	}
+
+
 
 
 Success Response:
@@ -40,3 +42,207 @@ Error Response:
  	NOTE:(we could add more validation errors for the other attributes)
 
   Sample Call 	
+  Example
+	{
+		forename:chuiquito,
+		surname:delacalzada,
+		email:chiquito@otro.com,
+		password:melon2000
+		
+	}
+
+
+
+
+Title
+	Login.
+
+URL
+	/api/v1/auth/login
+
+Method: POST
+
+Data Params
+	
+	Example
+	{
+		email:chuiquito [string],
+		password:delacalzada  [string]
+	
+	}
+
+
+
+
+Success Response:
+	Example:
+	Code: 200
+	Content: {"token":"sdsadasderererzxz.ZMGQ2Y2MiLCJpc3MiOiJodHRwOi8vYXBpLnRlc"}
+
+Error Response:
+ 	Example:
+ 	Code:422
+ 	Content:["invalid_email_or_password"]
+
+ 	
+
+  Sample Call 	
+  Example:
+  	POST /api/v1/auth/login
+	content-type: application/x-www-form-urlencoded
+
+  BODY:
+	{
+		email:chuiquito,
+		password:delacalzada
+	
+	}
+
+
+Title
+	Get Auth User.
+
+URL
+	api/v1/user?token=<token>
+
+Method: GET
+
+URL Params 
+	token=<string>
+	example:token=asdsaddfsdasdasdsdfsdfsfsaddasd
+		
+
+
+Success Response:
+	Example:
+	Code: 200
+	Content: 
+	{
+	    "result": {
+	        "id": "bdbe6f82-551b-11e8-b91a-080027f0d6cc",
+	        "forename": "2131313",
+	        "surname": "adsadadadad",
+	        "email": "robbyschuh2@gmail.com",
+	        "created_at": "2018-05-11 13:03:47",
+	        "updated_at": "2018-05-11 13:06:42"
+	    }
+	}
+
+Error Response:
+ 	Example:
+ 	Code:403
+ 	Content:["token_invalid"]
+
+ 	
+
+  Sample Call 	
+  	Example
+	http://api.test/api/v1/user?token=eyJ0eXAiOiJKV1QiLCJhbG
+
+
+Title
+	Update user.
+	NOTE:This endpoint only update non empty attributes
+
+URL
+	api/v1/users/<uuid>?token=<token>
+
+Method: PUT
+
+URL Params 
+
+	uuid==<string>
+	token=<string>
+	example:bdbe6f82-551b-11e8-b91a-080027f0d6cc?token=asdsaddfsdasdasdsdfsdfsfsaddasd
+		
+
+Data Params
+	
+	Example
+	{
+		forename:Julia [string],
+
+	}
+
+	Example2
+	{
+		
+		email:chiquito@otro.com  [string],
+		password:newPassword  [string]
+		
+	}
+	Example3
+	{
+		forename:Julia [string],
+		surname:Ramirez  [string],
+		email:newemail@otro.com  [string],
+		password:newpassword  [string]
+		
+	}
+
+Success Response:
+	Example:
+	Code: 200
+	Content: {"message": "User updated"}
+
+Error Response:
+ 	Example:
+ 	Code:404
+ 	Content:{
+	    "data": {
+	        "message": "Resource not found",
+	        "status_code": 404
+	    }
+	}
+
+
+  Sample Call 	
+  Example:
+	PUT /api/v1/users/bdbe6f82-551b-11e8-b91a-080027f0sd6cc
+	content-type: application/x-www-form-urlencoded
+	token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ
+
+	body:
+	{
+		forename=new name,
+		description=example update
+	}
+
+
+Title
+	Delete a User.
+
+URL
+	api/v1/users/<uuid>?token=<token>
+
+Method: DELETE
+
+URL Params 
+	uuid=<string>
+	token=<string>
+	example:token=asdasdasdad?asdsaddfsdasdasdsdfsdfsfsaddasd
+		
+
+
+Success Response:
+	Example:
+	Code: 200
+	Content: 
+	{
+    	"message": "User deleted"
+	}
+
+Error Response:
+ 	Example:
+ 	Code:404
+ 	Content:{
+	    "data": {
+	        "message": "Resource not found",
+	        "status_code": 404
+	    }
+	}
+
+ 	
+Sample Call 	
+	Example:
+	http://api.test/api/v1/users/4f8ab3d8-55c8-11e8-aacc-080027f0d6cc?token=eyJ0eXAiOiJKV1QiLCJhbGciOi
