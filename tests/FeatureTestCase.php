@@ -13,18 +13,6 @@ class FeatureTestCase extends TestCase
 {
     use DatabaseMigrations;
 
-    protected $defaultUser;
 
-    /*
-     * @var \App\User
-     */
-    function defaultUser(){
-
-        if($this->defaultUser){
-            return $this->defaultUser;
-        }
-
-        return $this->defaultUser = factory('App\User',  1)->create();
-    }
 
 }

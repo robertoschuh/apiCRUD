@@ -21,7 +21,7 @@ class UserTests extends FeatureTestCase
     public function test_login_user()
     {
 
-       // dd($this->defaultUser());
+      
         $this->actingAs($this->defaultUser());
 
         $response = $this->json('POST', '/api/v1/auth/login', ['email' => 'demo@demo.com', 'password' => bcrypt('demo')]);
