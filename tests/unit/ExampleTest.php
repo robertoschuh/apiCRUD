@@ -2,11 +2,12 @@
 
 namespace Tests\Unit;
 
+use Tests\FeatureTestCase;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ExampleTest extends TestCase
+class ExampleTest extends FeatureTestCase
 {
     /**
      * A basic test example.

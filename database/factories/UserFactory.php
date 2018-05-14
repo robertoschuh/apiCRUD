@@ -27,3 +27,17 @@ $factory->defineAs(App\User::class, 'registered', function (Faker $faker) {
    //     'verified' => 1,
     ];
 });
+
+$factory->define(App\User::class, function (Faker $faker) {
+
+    return [
+        'id' => $faker->uuid,
+        'forename' => 'demo',
+        'email' => 'demo@demo.com',
+        'surname' => 'demoname',
+        'password' => bcrypt('demo'),
+        'remember_token' => str_random(10),
+
+        //     'verified' => 1,
+    ];
+});
