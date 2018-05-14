@@ -132,7 +132,7 @@
 
  ###### Sample Call 	
   	Example
-	http://api.test/api/v1/user?token=eyJ0eXAiOiJKV1QiLCJhbG
+	http://backtechservices.co.uk/restapi/api/v1/user?token=eyJ0eXAiOiJKV1QiLCJhbG
 
 
 #### Title: Update user.
@@ -238,4 +238,4 @@
  	
 ###### Sample Call 	
 	Example:
-	http://api.test/api/v1/users/4f8ab3d8-55c8-11e8-aacc-080027f0d6cc?token=eyJ0eXAiOiJKV1QiLCJhbGciOi
+	http://backtechservices.co.uk/restapi/api/v1/users/4f8ab3d8-55c8-11e8-aacc-080027f0d6cc?token=eyJ0eXAiOiJKV1QiLCJhbGciOi
