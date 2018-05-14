@@ -3,7 +3,7 @@
 #### TEST with POSTMAN
 #### Laravel functional tests TDD
 
-###### Endpoint URL:http://backtechservices.co.uk/restapi/
+###### Endpoint URL:http://207.154.241.4/restapi/
 
 #### Title: Register a new user.
 
@@ -132,7 +132,7 @@
 
  ###### Sample Call 	
   	Example
-	http://backtechservices.co.uk/restapi/api/v1/user?token=eyJ0eXAiOiJKV1QiLCJhbG
+	http://207.154.241.4/restapi/api/v1/user?token=eyJ0eXAiOiJKV1QiLCJhbG
 
 
 #### Title: Update user.
@@ -238,4 +238,4 @@
  	
 ###### Sample Call 	
 	Example:
-	http://backtechservices.co.uk/restapi/api/v1/users/4f8ab3d8-55c8-11e8-aacc-080027f0d6cc?token=eyJ0eXAiOiJKV1QiLCJhbGciOi
+	http://207.154.241.4/restapi/api/v1/users/4f8ab3d8-55c8-11e8-aacc-080027f0d6cc?token=eyJ0eXAiOiJKV1QiLCJhbGciOi
