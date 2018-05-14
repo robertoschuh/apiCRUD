@@ -1,7 +1,9 @@
 
 ## API Documentation
+#### TEST with POSTMAN
+#### Laravel functional tests TDD
 
-###### Endpoint URL:http://api.test
+###### Endpoint URL:http://backtechservices.co.uk/restapi/
 
 #### Title: Register a new user.
 
