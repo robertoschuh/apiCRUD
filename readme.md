@@ -3,7 +3,7 @@
 #### TESTED with POSTMAN
 #### Laravel functional tests TDD (just for login and register, we could do more tests for delete and get users etc..)
 
-###### Endpoint URL:http://masquebits.com (the code needs to be upload, coming soon...)
+###### Endpoint URL:http://masquebits.com
 
 #### Title: Register a new user.
 
