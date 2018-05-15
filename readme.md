@@ -1,7 +1,7 @@
 
 ## API Documentation
 #### TEST with POSTMAN
-#### Laravel functional tests TDD
+#### Laravel functional tests TDD (just for login and register, we could do more tests for delete and get users etc..)
 
 ###### Endpoint URL:http://sandbox.backtechservices.co.uk (the code needs to be upload, coming soon...)
 
