@@ -3,7 +3,7 @@
 #### TESTED with POSTMAN
 #### Laravel functional tests TDD (just for login and register, we could do more tests for delete and get users etc..)
 
-###### Endpoint URL:http://sandbox.backtechservices.co.uk (the code needs to be upload, coming soon...)
+###### Endpoint URL:http://masquebits.com (the code needs to be upload, coming soon...)
 
 #### Title: Register a new user.
 
@@ -132,7 +132,7 @@
 
  ###### Sample Call 	
   	Example
-	http://sandbox.backtechservices.co.uk/api/v1/user?token=eyJ0eXAiOiJKV1QiLCJhbG
+	http://masquebits.com/api/v1/user?token=eyJ0eXAiOiJKV1QiLCJhbG
 
 
 #### Title: Update user.
@@ -238,4 +238,4 @@
  	
 ###### Sample Call 	
 	Example:
-	http://sandbox.backtechservices.co.uk/api/v1/users/4f8ab3d8-55c8-11e8-aacc-080027f0d6cc?token=eyJ0eXAiOiJKV1QiLCJhbGciOi
+	http://masquebits.com/api/v1/users/4f8ab3d8-55c8-11e8-aacc-080027f0d6cc?token=eyJ0eXAiOiJKV1QiLCJhbGciOi
